@@ -29,6 +29,8 @@ async fn main() {
             std::process::exit(1);
         }
     };
+
+
     let serve_dir = ServeDir::new("static").not_found_service(ServeFile::new("templates/index.html"));
     let app = Router::new()
         .route("/", get(index))
