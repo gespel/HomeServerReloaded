@@ -10,7 +10,7 @@ use tower_http::services::{ServeDir, ServeFile};
 
 async fn index(Extension(tera): Extension<Tera>) -> Html<String> {
     let mut context = Context::new();
-    context.insert("title", "Sten Heimbrodt");
+    context.insert("title", "HomeServerReloaded");
     context.insert("message", "just wannted to learn tera lol");
 
     let rendered = tera
